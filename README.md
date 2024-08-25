@@ -15,7 +15,7 @@
 ## 🖼️ Screenshots
 
 ### Homepage
-![Homepage](![image](https://github.com/user-attachments/assets/669cf186-cf17-419d-89c2-3048eb590dc7))
+![Homepage](https://github.com/user-attachments/assets/669cf186-cf17-419d-89c2-3048eb590dc7)
 
 ### Bitcoin Price Prediction
 (https://github.com/user-attachments/assets/669cf186-cf17-419d-89c2-3048eb590dc7)
