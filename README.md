@@ -1,36 +1,25 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# BitPredictProV2
 
-## Getting Started
+![License](https://img.shields.io/github/license/yourusername/BitPredictProV2)
+![Version](https://img.shields.io/badge/version-2.0-blue)
+![Python](https://img.shields.io/badge/Python-3.8+-brightgreen)
 
-First, run the development server:
+## 📊 Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+**BitPredictProV2** is an advanced tool for Bitcoin enthusiasts and traders, combining the power of machine learning and artificial intelligence. The project has two main features:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. **ML-Based Bitcoin Price Prediction**: Predict the future prices of Bitcoin using advanced machine learning algorithms.
+2. **AI News Summarizer and Advisor**: Automatically summarize the latest Bitcoin news and provide trading advice based on the sentiment and key insights derived from the news.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 Features
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **Machine Learning Prediction**:
+  - Predict Bitcoin prices with high accuracy.
+  - Leverages historical data and multiple indicators.
+  - Supports various model training and evaluation techniques.
 
-## Learn More
+- **AI News Summarizer and Advisor**:
+  - Summarizes the latest Bitcoin-related news articles.
+  - Provides sentiment analysis to gauge market mood.
+  - Offers actionable advice based on news sentiment.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
