@@ -1,14 +1,24 @@
 import Image from "next/image";
 import { Header } from "@/components/Header";
 import Link from "next/link";
-import { NewspaperIcon,User2 } from "lucide-react";
+import { NewspaperIcon,User2,Calendar,CheckCircle,Lightbulb } from "lucide-react";
 
 export default function Home() {
   return (
   <>
-  <Header/>
+  
+  
+
+ 
+   
+
+
+    <Header />
+ 
 
   <div className="flex flex-col gap-8 pb-8 md:gap-16 md:pb-16 xl:pb-24 bg-black">
+ 
+
       <div className="flex flex-col items-center justify-center max-w-3xl px-8 mx-auto mt-8 sm:min-h-screen sm:mt-0 sm:px-0">
         <div className="hidden sm:mb-8 sm:flex sm:justify-center">
           <Link
@@ -25,6 +35,13 @@ export default function Home() {
           <h1 className="py-4 text-5xl font-bold tracking-tight text-center text-transparent bg-gradient-to-t bg-clip-text from-zinc-100/50 to-white sm:text-7xl">
           Predict Tomorrow's Bitcoin Price with Confidence
           </h1>
+          <p className="mt-6 leading-5 text-zinc-600 sm:text-center">
+              {/* Add the last updated date here */}
+              <div className="flex items-center justify-center mt-4 text-sm text-zinc-400">
+                <Calendar className="mr-2" />
+                <span className="font-bold">Last updated till October 10, 2023  </span>
+              </div>
+            </p>
           <p className="mt-6 leading-5 text-zinc-600 sm:text-center">
           Receive real-time Bitcoin price updates and summaries of the latest news, all explained by AI. Never miss a beat with our notification system—enter your email, and we'll keep you informed.
           </p>
@@ -44,6 +61,35 @@ export default function Home() {
         </div>
       </div>
     </div>
+
+    <div className="container py-24 lg:py-32">
+          <h2 className="py-4 text-3xl font-bold text-center text-zinc-300">Why I built this project?</h2>
+          <div className="max-w-3xl mx-auto space-y-6 text-zinc-400">
+            <div className="flex items-start">
+              <CheckCircle className="mr-3 text-green-500" />
+              <p>While learning LSTM , also to apply the knowledge</p>
+            </div>
+            <div className="flex items-start">
+              <CheckCircle className="mr-3 text-green-500" />
+              <p>To build a robust and scalable application using modern web technologies like Next.js and Tailwind CSS.</p>
+            </div>
+            <div className="flex items-start">
+              <CheckCircle className="mr-3 text-green-500" />
+              <p>To contribute to the open-source community and collaborate with other developers.</p>
+            </div>
+            <div className="flex items-start">
+              <Lightbulb className="mr-3 text-yellow-500" />
+              <p>Learnings: Improved my skills in data analysis, API integration, and responsive design.</p>
+            </div>
+            <div className="flex items-start">
+              <Lightbulb className="mr-3 text-yellow-500" />
+              <p>Learnings: Gained experience in deploying and maintaining a live web application.</p>
+            </div>
+          </div>
+        </div>
+
+
+
     <h2 className="py-4 text-3xl font-bold text-center text-zinc-300 ">Features of BitPredictProV2</h2>
     <div className="container py-24 lg:py-32">
         <div className="max-w-4xl mx-auto">
@@ -52,7 +98,7 @@ export default function Home() {
             <div className=" space-y-6 lg:space-y-10">
           
 
-            
+            {/* AI summarizer feature card */}
               <div className="flex">
                 <NewspaperIcon className="flex-shrink-0 mt-2 h-8 w-8" />
                 <div className="ms-5 sm:ms-8">
@@ -66,7 +112,12 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="flex">
+
+             
+            </div>
+            <div className=" space-y-6 lg:space-y-10">
+            {/* ML summarizer feature card */}
+            <div className="flex">
                 <User2 className="flex-shrink-0 mt-2 h-8 w-8" />
                 <div className="ms-5 sm:ms-8">
                   <h3 className="text-base sm:text-lg font-semibold">
@@ -78,8 +129,7 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-             
-            </div>
+              </div>
            
           </div>
          
@@ -87,6 +137,8 @@ export default function Home() {
           {/* End Grid */}
         </div>
    </div>
+
+
 
 
 
