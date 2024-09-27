@@ -66,7 +66,7 @@ const PredectionGraph = () => {
    <>
 
 <Card
-          className="flex flex-col lg:max-w-5xl h-auto" x-chunk="charts-01-chunk-1"
+          className="flex flex-col lg:max-w-9xl h-auto" x-chunk="charts-01-chunk-1"
         >
             <CardHeader className="flex flex-col gap-4 space-y-0 pb-2">
         <div className="flex flex-row items-center gap-4 [&>div]:flex-1">
@@ -84,12 +84,20 @@ const PredectionGraph = () => {
         </div>
       </CardHeader>
           <CardContent className="flex flex-1 items-center">
-            {pastmonthdata.length > 0 && (
+            {/* {pastmonthdata.length > 0 && (
               <ChartContainer
               config={{
-                resting: {
-                  label: "Resting",
+                // resting: {
+                //   label: "Resting",
+                //   color: "hsl(var(--chart-1))",
+                // },
+                actual: {
+                  label: "Actual",
                   color: "hsl(var(--chart-1))",
+                },
+                prediction: {
+                  label: "Prediction",
+                  color: "hsl(var(--chart-2))",
                 },
               }}
               className="w-full"
@@ -117,7 +125,7 @@ const PredectionGraph = () => {
         /> <YAxis hide domain={["dataMin - 10", "dataMax + 10"]} />
       
         <Line
-          dataKey="resting"
+          dataKey="actual"
           type="natural"
           fill="red"
           stroke="red"
@@ -129,7 +137,7 @@ const PredectionGraph = () => {
             r: 4,
           }}
         /> <Line
-        dataKey="running"
+        dataKey="prediction"
         type="natural"
         fill="blue"
         stroke="blue"
@@ -161,7 +169,87 @@ const PredectionGraph = () => {
             </ChartContainer>
 
             )}
-            
+             */}
+             {pastmonthdata.length > 0 && (
+  <ChartContainer
+    config={{
+      actual: {
+        label: "Actual",
+        color: "hsl(var(--chart-1))",
+      },
+      prediction: {
+        label: "Prediction",
+        color: "hsl(var(--chart-2))",
+      },
+    }}
+    className="w-full"
+  >
+    <LineChart
+      accessibilityLayer
+      margin={{
+        left: 14,
+        right: 14,
+        top: 10,
+      }}
+      data={pastmonthdata.map((data) => {
+        return {
+          date: new Date(data.timestamp).toISOString(),
+          actual: data.actual,
+          prediction: data.prediction,
+        };
+      })}
+    >
+      <CartesianGrid
+        strokeDasharray="4 4"
+        vertical={false}
+        stroke="hsl(var(--muted-foreground))"
+        strokeOpacity={0.5}
+      />
+      <YAxis hide domain={["dataMin - 10", "dataMax + 10"]} />
+      <Line
+        dataKey="actual"
+        type="natural"
+        fill="red"
+        stroke="red"
+        strokeWidth={2}
+        dot={false}
+        activeDot={{
+          fill: "red",
+          stroke: "red",
+          r: 4,
+        }}
+      />
+      <Line
+        dataKey="prediction"
+        type="natural"
+        fill="blue"
+        stroke="blue"
+        strokeWidth={2}
+        dot={false}
+        activeDot={{
+          fill: "blue",
+          stroke: "blue",
+          r: 4,
+        }}
+      />
+      <ChartTooltip
+        content={
+          <ChartTooltipContent
+            indicator="line"
+            labelFormatter={(value) => {
+              console.log(value);
+              return new Date(value).toLocaleDateString("en-US", {
+                day: "numeric",
+                month: "long",
+                year: "numeric",
+              });
+            }}
+          />
+        }
+      />
+    </LineChart>
+  </ChartContainer>
+)}
           </CardContent>
         </Card>
    
