@@ -14,7 +14,7 @@ export const GET = async (req: NextRequest) => {
     
     const response = await axios.get(`https://newsapi.org/v2/everything?q=bitcoin&sortBy=popularity&apiKey=d4eb2726b9664b838fc24a091c4d2ba8`);
     const data = response.data;
-    console.log(data);
+
     const articles = data.articles;
     
     const top10articles = articles.slice(0, 10);

@@ -48,7 +48,7 @@ export const GET = async (req: NextRequest) => {
   description:news.description,
  }
   });
-  console.log(JSON.stringify(formatteddata));
+
 
   const formattedNews = await prompt1.format({
     newsdata:JSON.stringify(formatteddata),
