@@ -37,10 +37,22 @@ const llm = new ChatGoogleGenerativeAI({
 
 export const GET = async (req: NextRequest) => {
 
-  const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
-  const newsdata = await axios.get(`${baseUrl}/api/GetBitcoinNews`);
 
-  const news = newsdata.data;
+  const todaydate = new Date();
+  const fivedaysfromtoday = new Date(todaydate);
+  fivedaysfromtoday.setDate(todaydate.getDate() - 25);
+  
+
+
+  
+  const response = await axios.get(`https://newsapi.org/v2/everything?q=bitcoin&sortBy=popularity&apiKey=d4eb2726b9664b838fc24a091c4d2ba8`);
+  const data = response.data;
+
+  const articles = data.articles;
+  
+  const news = articles.slice(0, 10);
+
+  
 
   const formatteddata = news.map((news:any) => {
 
