@@ -71,7 +71,7 @@ const NewSection = () => {
         <Link href={newsdata[0]?.url || "/" }>
           <Card>
           <CardContent className="p-0">
-            <img src={newsdata[0]?.urlToImage} alt="Woman" />
+          <img src={newsdata[0]?.urlToImage || ""} alt="Woman" />
           </CardContent>
           <CardHeader>
             <Badge className="mb-2 bg-purple-100 text-purple-800">{newsdata[0]?.source.name}</Badge>
@@ -87,7 +87,7 @@ const NewSection = () => {
 
         <Card>
           <CardContent className="p-0">
-            <img src={newsdata[1]?.urlToImage} alt="Woman" />
+          <img src={newsdata[1]?.urlToImage || ""} alt="Woman" />
           </CardContent>
           <CardHeader>
             <Badge className="mb-2 bg-purple-100 text-purple-800">{newsdata[1]?.source.name}</Badge>
@@ -104,7 +104,7 @@ const NewSection = () => {
 
         <Card>
           <CardContent className="p-0">
-            <img src={newsdata[2]?.urlToImage} alt="Woman" />
+          <img src={newsdata[2]?.urlToImage || ""} alt="Woman" />
           </CardContent>
           <CardHeader>
             <Badge className="mb-2 bg-purple-100 text-purple-800">{newsdata[0]?.source.name}</Badge>
@@ -120,7 +120,7 @@ const NewSection = () => {
         <Link href={newsdata[3]?.url || "/" }>
         <Card>
           <CardContent className="p-0">
-            <img src={newsdata[3]?.urlToImage} alt="Woman" />
+          <img src={newsdata[3]?.urlToImage || ""} alt="Woman" />
           </CardContent>
           <CardHeader>
             <Badge className="mb-2 bg-purple-100 text-purple-800">{newsdata[1]?.source.name}</Badge>

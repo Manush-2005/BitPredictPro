@@ -38,8 +38,7 @@ export const Header: React.FC = () => {
                     className={`flex items-center px-3 py-2 duration-150 text-sm sm:text-base  hover:text-zinc-50
                     ${pathname === item.href ? "text-zinc-200" : "text-zinc-400"}`}
                     href={item.href}
-                    target={item.external ? "_blank" : undefined}
-                    rel={item.external ? "noopener noreferrer" : undefined}
+                   
                   >
                     {item.name}
                   </Link>
