@@ -39,7 +39,7 @@ export default function Home() {
               {/* Add the last updated date here */}
               <div className="flex items-center justify-center mt-4 text-sm text-zinc-400">
                 <Calendar className="mr-2" />
-                <span className="font-bold">Last updated till October 10, 2023  </span>
+                <span className="font-bold">Last updated till Septmember 29, 2024  </span>
               </div>
             </p>
           <p className="mt-6 leading-5 text-zinc-600 sm:text-center">
@@ -67,15 +67,15 @@ export default function Home() {
           <div className="max-w-3xl mx-auto space-y-6 text-zinc-400">
             <div className="flex items-start">
               <CheckCircle className="mr-3 text-green-500" />
-              <p>While learning LSTM , also to apply the knowledge</p>
+              <p>While learning LSTM, I wanted to apply the knowledge to a real-world project.</p>
             </div>
             <div className="flex items-start">
               <CheckCircle className="mr-3 text-green-500" />
-              <p>To build a robust and scalable application using modern web technologies like Next.js and Tailwind CSS.</p>
+              <p>To improve my existing project, BitPredictPro, by incorporating LSTM for better price range prediction of stocks.</p>
             </div>
             <div className="flex items-start">
               <CheckCircle className="mr-3 text-green-500" />
-              <p>To contribute to the open-source community and collaborate with other developers.</p>
+              <p>To upgrade the project from V1 to V2 with significant improvements and additional features like news integration.</p>
             </div>
             <div className="flex items-start">
               <Lightbulb className="mr-3 text-yellow-500" />
