@@ -37,7 +37,7 @@ const llm = new ChatGoogleGenerativeAI({
 
 export const GET = async (req: NextRequest) => {
 
-  const newsdata = await axios.get("http:/localhost:3000/api/GetBitcoinNews");
+  const newsdata = await axios.get("/api/GetBitcoinNews");
 
   const news = newsdata.data;
 
